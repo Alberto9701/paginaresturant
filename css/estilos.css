@@ -1,0 +1,219 @@
+:root{
+    --primario: #de685d;
+    --secundario: #fbac80;
+    --terciario: #ffecb6;
+    --blanco: #FFF;
+    --negro: #000;
+
+    --fuentePrincipal: 'Comforter', cursive;
+    --fuenteSecundario: 'Merriweather', serif;
+}
+
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit; /*codigo para el box model*/
+}
+
+/*globales*/
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+body{
+    background-color: var(--terciario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h2{
+    color: var(--negro);
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+}
+
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 4.2rem;
+}
+h3{
+    font-size: 3.4rem;
+}
+
+hr{
+    width: 100%;
+    color: var(--negro);
+    height: 10px;
+    background-color: var(--negro);
+}
+
+/*header*/
+.header{
+    background-color: var(--primario);
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo{
+    margin: 1rem 0;
+    padding: 0;
+}
+
+/*navegacion*/
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 5rem;
+    background-color: var(--secundario);
+}
+
+@media (min-width: 768px) {
+    .navegacion{
+        display: flex;
+        flex-direction: row;
+        padding: 2rem 0;
+        justify-content: center;
+        gap: 5rem;
+        background-color: var(--secundario);
+    }
+}
+
+
+.navegacion__enlace{
+    color: var(--negro);
+    font-size: 3rem;
+    font-family: var(--fuentePrincipal);
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+    color: var(--blanco);
+}
+
+/*grid*/
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+/*principal*/
+.informacion{
+    padding: 1rem;
+}
+.informacion__texto{
+    color: var(--negro);
+    font-family: var(--fuenteSecundario);
+    text-align: center;
+    font-size: 3rem;
+
+}
+.informacion__imagen{
+    width: 100%;
+}
+.centrar_imagen{
+    margin-top: 8.5rem;
+    height: 20rem;
+}
+
+.centrar_imagen2{
+    margin-top: 8.5rem;
+}
+.meseros{
+    margin-top: 7rem;
+    height: 40rem;
+}
+
+/*alimentos*/
+.grid__alimentos{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+@media (min-width: 768px) {
+    .grid__alimentos{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+.alimento{
+    padding: 1rem;
+}
+
+.alimento__nombre{
+    font-size: 4rem;
+}
+
+.alimento__informacion,
+.alimento__precio{
+    font-size: 2.8rem;
+}
+
+.alimento__nombre,
+.alimento__informacion,
+.alimento__precio{
+    color: var(--negro);
+    font-family: var(--fuenteSecundario);
+}
+
+/*galeria*/
+.galeria{
+    padding: 1rem;
+}
+.galeria__imagen{
+    height: 100%;
+}
+
+/*.galeria__imagen2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}*/
+
+
+
+
+/*footer*/
+
+.footer{
+    background-color: var(--secundario);
+    margin: 2rem 0;
+    padding: 0.5rem 0;
+}
+
+.footer__texto{
+    text-align: center;
+    font-family: var(--fuenteSecundario);
+    line-height: 1;
+    color: var(--negro);
+}
